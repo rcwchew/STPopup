@@ -633,6 +633,7 @@ static NSMutableSet *_retainedPopupControllers;
 
 - (void)bgViewDidTap
 {
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"STPopupBackgroundViewDidTap" object:nil];
     [_containerView endEditing:YES];
 }
 
